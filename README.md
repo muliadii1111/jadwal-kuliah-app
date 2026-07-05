@@ -1,9 +1,8 @@
 # 📅 Jadwal Kuliah — React Native (Expo)
 
-**Nama:** Muli
-**NIM:** 233510205
-**Kelas:** TI-5B
-**Program Studi:** Teknik Informatika, Universitas Islam Riau (UIR)
+**Nama:** Muliadi
+**NPM:** 233510205
+
 **Mata Kuliah:** Pemrograman Mobile
 **Tugas:** Praktikum — Handling Lists & Data Rendering (`.map()`, `FlatList`, `SectionList`)
 
