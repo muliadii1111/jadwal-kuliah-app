@@ -87,6 +87,12 @@ jadwal-kuliah-app/
 Font kustom (Fraunces & IBM Plex Sans) otomatis di-download saat pertama kali
 dijalankan, jadi pastikan koneksi internet aktif di percobaan pertama.
 
+> **Kalau QR code gagal di-scan / muncul pesan "update Expo Go":** itu
+> tandanya versi SDK project tidak cocok dengan versi Expo Go di HP. Buka
+> Expo Go → lihat versi SDK yang didukung (biasanya di halaman profil/about),
+> lalu pastikan versi `expo` di `package.json` sesuai (lihat bagian Catatan
+> teknis di bawah).
+
 ## Cara upload ke GitHub
 
 Folder ini sudah berupa git repo lokal dan **sudah ada 1 commit awal**
@@ -106,8 +112,14 @@ Link repo itu yang dikumpulkan sesuai ketentuan pengumpulan tugas.
 
 ## Catatan teknis
 
-- **Expo SDK 57** / React Native 0.86 / React 19 (versi terbaru saat proyek
-  ini dibuat) — New Architecture aktif secara default.
+- **Expo SDK 54** / React Native 0.81.5 / React 19.1.0. Sengaja dipakai versi
+  ini (bukan versi paling baru di npm) karena aplikasi **Expo Go** di App
+  Store/Play Store butuh waktu untuk menyusul rilis SDK terbaru — kalau
+  project pakai SDK yang lebih baru dari yang didukung Expo Go di HP kamu,
+  scan QR-nya akan gagal/minta update padahal Expo Go sudah versi terbaru.
+  SDK 54 adalah versi yang paling luas didukung Expo Go saat ini.
+- Kalau suatu saat Expo Go di HP sudah mendukung SDK yang lebih baru, project
+  ini bisa di-upgrade dengan `npx expo install expo@<versi-baru> --fix`.
 - Ikon tab bawah sengaja dibuat sebagai monogram teks dalam lingkaran (bukan
   library ikon eksternal), karena `@expo/vector-icons` sudah dinyatakan
   deprecated per SDK 56 sehingga dihindari.
